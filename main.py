@@ -4,7 +4,10 @@ Github: https://github.com/deshayk
 Medium: https://www.medium.com/@deshayk
 LinkedIn: https://www.linkedin.com/in/deshayk/
 """
-
+'''
+Program Notes:
+I need to be able to print the morse code on a single line
+'''
 from morse import morse #import the morse code dictionary
 
 def translateInput():
@@ -17,9 +20,15 @@ def translateInput():
 
 #loop through the list of characters
     for x in getCharList(str): #for each character, check if it is in the morse code dictionary
+      translation = [] #create a list to hold the translation
       if x in morse:
-        print(morse[x]) #if the character is in the morse dictionary, print the morse code for that character
+        translation.append(morse[x]) #if it is in the dictionary, add the translation to the list
+        final = ' '.join(translation) #join the translation list into a string
+        finalTranslation = '' #create a list to hold the final translation
+        for y in final:
+          finalTranslation += ' ' + y #add a space between each translation
+        print(finalTranslation) #print the final translation
       else:
         print("Sorry, that character is not in the morse code dictionary. Please use a valid character.") #if the character is not in the morse dictionary, print an error message
 
-translateInput()    
+translateInput()    #call the translateInput function
