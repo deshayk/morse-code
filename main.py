@@ -8,7 +8,7 @@ LinkedIn: https://www.linkedin.com/in/deshayk/
 Program Notes:
 I need to be able to print the morse code on a single line
 '''
-from morse import morse #import the morse code dictionary
+from morse_dictionary import morse #import the morse code dictionary
 
 def main(): #main function
   
